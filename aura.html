@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aurastudio</title>
+    <link rel="stylesheet" href="aurastyle.css">
+</head>
+
+<body>
+
+    <!-- ===== Navbar ===== -->
+    <header>
+        <a href="#hero" class="logo">
+            <img src="aura studio logo c.png" alt="Aura Studio logo">
+        </a>
+
+        <!-- ===== hamburger icon =====
+      <div class="hero" class="logo">
+        <img src="/aurastudio/images/icons8-hamburger-menu-50.png" id="menu-toggle">
+      </div> -->
+
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== Hero Section ===== -->
+    <section id="hero">
+        <h1>Aura Studio</h1>
+        <p class="tagline">We Bring your Ideas to Life.</p>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Aura Studio is a London-based creative agency helping brands express their identity through modern,
+            minimalist design.
+            We craft branding, UI/UX, and web experiences that communicate simplicity, elegance, and purpose.
+            Our approach focuses on clean aesthetics, strong visuals, and meaningful storytelling through design.
+        </p>
+    </section>
+
+    <!-- ===== Services Section ===== -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <h3>Branding</h3>
+                <p>We create timeless brand identities that speak clearly and stand out with purpose and consistency.
+                </p>
+            </div>
+            <div class="service-box">
+                <h3>UI/UX Design</h3>
+                <p>We design intuitive digital experiences that connect brands to their audiences seamlessly and
+                    beautifully.</p>
+            </div>
+            <div class="service-box">
+                <h3>Web Design</h3>
+                <p>We build clean, responsive websites that blend functionality with minimalist elegance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="5" placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <p>© <span id="year"></span> Aura Studio. All rights reserved.</p>
+    </footer>
+
+    <!-- ===== Back to Top Button ===== -->
+    <button id="backToTop">↑</button>
+
+    <script>
+        // Dynamic Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Back to Top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+
+</html>
